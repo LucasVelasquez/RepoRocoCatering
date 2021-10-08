@@ -12,7 +12,8 @@ h1{
 ul{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content:right;
+    padding: 0%;
 
     li{
         list-style:none;
@@ -193,27 +194,65 @@ footer{
 
 /* Pagina Servicios*/
 /*aca empieza main*/
-
-table{
-    tr{
-        th{
-            color: black;
-            font-family: 'Montserrat', sans-serif;
-            font-size: medium;
-        }
-    }
-    tr{
-        td{
-            color: black;
-            font-family: 'Montserrat', sans-serif;
-            font-size: small;
-        }
-    }
+h2{
+    color: rgb(145, 24, 24);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-top: 0.5%;
+    padding-left: 3%;
+    padding-bottom: 1%;
+}
+.column{
+    float: left;
+    width: 32%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    height: 500px;
+}
+.container{
+    padding: 0 16px;
+}
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.title{
+    color: grey;
+}
+.button{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    
+}
+.button:hover {
+    background-color: #555;
+}
+.veggie{
+    color: rgb(145, 24, 24);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    padding-left: 10%;
 }
 
 /* Pagina Galeria*/
 /*aca empieza main*/
-
+.galeriaCarousel{
+    padding: 2% 5% 2% 5%;
+}
 .d-block w-100{
     width: 100px;
 }
@@ -227,6 +266,7 @@ table{
         display: flex;
         flex-direction:column;
         justify-content:center;
+        padding-left: 0%;
         li{
             text-align: center;
             border-style:inherit;
@@ -239,7 +279,15 @@ table{
             text-align: left;
         }
     }
+    .column {
+        width: 90%;
+        display:block;
+        align-items: center;
+    }
+    
 }
+
+
 
 /* aplico mobile first desde 768px                                */
 @media only screen and (max-width:768px){
