@@ -246,6 +246,7 @@ h2{
     font-size: 18px;
     font-weight: bolder;
     padding-left: 10%;
+    padding-bottom: 1%;
 }
 
 /* Pagina Galeria*/
@@ -257,18 +258,69 @@ h2{
     width: 100px;
 }
 
+.carouselTitulo{
+    color: rgb(145, 24, 24);
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(248, 246, 242, 0.685);
+    width: 230px;
+    height: 30px;
+    text-align: center;
+    display: block;
+    padding-top: 0.5%;
+    position:static;
+    
+}
+.carouselDescription{
+    color: rgb(145, 24, 24);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(231, 216, 195, 0.514);
+    font-weight: bold;
+    margin: 0 auto; 
+    padding: 10px;
+    width: auto;
+    position:static;
+    text-justify: center;
+    text-align: center;
+}
+
+
 /* Pagina Error 404*/
 
 .errorNavegacion{
+
     h1{
-        color: black;
+        padding-top: 1%;
+        padding-bottom: 1%;
         font-size: 50px;
+        font-family: sans-serif;
+        text-align: center;
+        color: black;
+        font-weight: bolder;
+    }
+    &__full{
+        margin: auto;
+        display: block;
+        visibility: visible;
+    }
+    &__mobile{
+        margin: auto;
+        display: none;
+        visibility: hidden;
     }
     p{
-        color: black;
-        font-size: 17px;
-        font-weight: normal
+        font-size: 24px;
+        font-weight: normal;
+        color:black;
+        text-align: center;
     }
+}
+.volverAlMenu{
+    text-align: center;
+    display: block;
+    font-size: 20px;
 }
 
 /* aplico mobile first hasta 600px                                */
@@ -298,7 +350,18 @@ h2{
         display:block;
         align-items: center;
     }
-    
+    .errorNavegacion{
+        &__full{
+        margin: auto;
+        display: none;
+        visibility: hidden;
+        }
+        &__mobile{
+        margin: auto;
+        display: block;
+        visibility: visible;
+        }
+    }
 }
 
 
