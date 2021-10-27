@@ -123,6 +123,12 @@ footer {
     font-size: 17px;
     font-weight: normal; }
 
+.cocinaProtoc {
+  margin: auto;
+  display: block;
+  height: 450px;
+  width: 750px; }
+
 /* Pagina Conocenos*/
 /*aca empieza main*/
 .chef {
@@ -139,25 +145,31 @@ footer {
 .formacionProfesional {
   margin: 2% 5% 2% 5%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "texto texto texto imagen" "texto texto texto imagen" "textoDos textoDos textoDos otraImagen"; }
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 3fr 1fr 2fr 2fr;
+  grid-template-areas: "texto texto texto imagen" "textoDos textoDos textoDos imagen" "textoTres textoTres textoTres imagen" "textoCuatro textoCuatro textoCuatro otraImagen"; }
 
-.formacionUno, .formacionTres {
+.formacionUno, .formacionTres, .formacionCinco, .formacionSeis {
   grid-area: texto;
   color: black;
   padding-bottom: 5px;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: normal; }
 
 .formacionDos {
   grid-area: imagen; }
 
 .formacionTres {
-  grid-area: textoDos; }
+  grid-area: textoCuatro; }
 
 .formacionCuatro {
   grid-area: otraImagen; }
+
+.formacionCinco {
+  grid-area: textoDos; }
+
+.formacionSeis {
+  grid-area: textoTres; }
 
 /* Pagina Servicios*/
 /*aca empieza main*/
@@ -239,7 +251,7 @@ h2 {
   color: #911818;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
-  background-color: rgba(231, 216, 195, 0.514);
+  background-color: rgba(231, 216, 195, 0.747);
   font-weight: bold;
   margin: 0 auto;
   padding: 10px;
@@ -291,6 +303,33 @@ h2 {
     ul li {
       text-align: center;
       border-style: inherit; }
+  .redes__seguir {
+    font-size: 15px; }
+  .redes__despedida {
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    padding-bottom: 3%; }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .formulario__consultas {
+      color: white;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 35px; }
+    .formulario__contact {
+      background-color: white;
+      height: auto;
+      width: 70%;
+      justify-items: center;
+      align-items: center;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-left: 15%;
+      margin-right: 15%; }
   /* aplica a pagina covid*/
   .covid li {
     text-align: center; }
@@ -307,10 +346,52 @@ h2 {
   .errorNavegacion__mobile {
     margin: auto;
     display: block;
-    visibility: visible; } }
+    visibility: visible; }
+  .cocinaProtoc {
+    margin: auto;
+    display: block;
+    height: 100%;
+    width: 80%; }
+  /* aplico a pagina Conocemos                                    */
+  .formacionProfesional {
+    margin: 2% 5% 2% 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 1.5fr 3fr;
+    grid-template-areas: "texto texto texto imagen" "textoDos textoDos textoDos textoDos" "textoTres textoTres textoTres textoTres" "textoCuatro textoCuatro textoCuatro otraImagen"; } }
+
+/* aplico a pagina Error                                          */
+.errorNavegacion h1 {
+  padding-top: 10%; }
 
 /* aplico mobile first desde 768px                                */
 @media only screen and (max-width: 768px) {
-  /* aplica a pagina covid*/ }
+  /* aplica a pagina Home*/
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .formulario__consultas {
+      color: white;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 42px; }
+    .formulario__contact {
+      background-color: white;
+      height: auto;
+      width: 70%;
+      justify-items: center;
+      align-items: center;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-left: 15%;
+      margin-right: 15%; }
+  /* aplico a pagina Error                                          */
+  .errorNavegacion h1 {
+    padding-top: 7%; } }
 
 /* aplico mobile first desde 768px                                */
+@media only screen and (min-width: 768px) {
+  /* aplico a pagina Error                                          */
+  .errorNavegacion h1 {
+    padding-top: 4%; } }
