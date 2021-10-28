@@ -4,62 +4,89 @@
     margin: 0;
     padding: 0;
 }
-h1{
-    color: red;
-    font-family: 'Noto Sans JP', sans-serif;
-    margin-left: 2%;
+
+nav{
+    background-color: rgb(231, 216, 195);
+    height: 80px;
+    width: 100%;
 }
-ul{
-    display: flex;
-    flex-direction: row;
-    justify-content:right;
-    padding: 0%;
 
-    li{
-        list-style:none;
-        margin: 10;
-        border-style:solid;
-        border-color: black;
-        padding: 10px;
-        background-color: rgb(231, 216, 195);
+.enlace{
+    position: absolute;
+    padding: 0px 50px;
+}
+.logo{
+    height: 80px;
+}
 
-        a{
-            color:rgb(145, 24, 24);
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-        }
-        a:hover{
-            color: white;
-        }
-    }
-    li:hover{
-            background-color: rgb(165, 36, 36);
-    }
-    
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: rgb(145, 24, 24);
+    font-size: 17px;
+    padding: 5px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+}
+li a:hover{
+    color: #ED1B3B;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: rgb(145, 24, 24);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
 /*aca empieza main*/
-}
 .inicio{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content:center;
     height: 500px;
     background-image: url("../Media/plato2.jpg");
-    background-size: cover;
+    background-size: 100%;
     background-position:center;
 
-    &__fondoImagen{
-        color: rgb(145, 24, 24);
-        font-size: 55px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
+    .inicio__fondoImagen{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
         background-color: rgba(231, 216, 195, 0.514);
-        font-weight: bold;
-        margin: 0 auto; 
-        padding: 10px;
-        width: auto;
-        position:static;
-        text-justify: center;
+        align-content: center;
+        justify-content: center;
+        transform: translateY(90%);
+        padding-right: 5%;
+        padding-left: 5%;
+
+    }
+    .inicio__fondoImagen p{
+        display: flex;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.7em;
+        color: rgb(145, 24, 24);
         text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -220,11 +247,17 @@ h2{
     padding-left: 3%;
     padding-bottom: 1%;
 }
+.columna-3{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+}
 .column{
     float: left;
-    width: 32%;
+    width: 30%;
     margin-bottom: 16px;
-    padding: 0 8px;
+    padding: 0 8px 0px 8px;
 }
 .card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -340,21 +373,41 @@ h2{
     font-size: 20px;
 }
 
-/* aplico mobile first hasta 600px                                */
-@media only screen and (max-width:600px){
-    h1{
-        text-align: center;
+/* aplico mobile first hasta 620px                                */
+@media only screen and (max-width:620px){
+    .checkbtn{
+        display: block;
     }
     ul{
-        display: flex;
-        flex-direction:column;
-        justify-content:center;
-        padding-left: 0%;
-        li{
-            text-align: center;
-            border-style:inherit;
-        }
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: burlywood;
+        top: 80px;
+        right: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
     }
+
+    nav ul li{
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 50px;
+    }
+    li a:hover, li a.active{
+        background-color: rgb(145, 24, 24);
+        color: rgb(255, 255, 255);
+    }
+    #check:checked ~ ul{
+        right: 0;
+    }
+
+
+
     .redes{
         &__seguir{
             font-size: 15px;
@@ -390,6 +443,10 @@ h2{
             margin-left: 15%;
             margin-right: 15%;
         }
+    }
+    .inicio__fondoImagen{
+        visibility: hidden;
+
     }
 
     /* aplica a pagina covid*/
@@ -444,9 +501,14 @@ h2{
     }
 }
 
+/* aplico a pagina Servicios                                          */
+.columna-3{
+    display: flex;
+    flex-wrap: wrap;
+}
 
-/* aplico mobile first desde 768px                                */
-@media only screen and (max-width:768px){
+/* aplico mobile first desde 800px                                */
+@media only screen and (max-width:800px){
     /* aplica a pagina Home*/
     .formulario{
         display: flex;
@@ -478,6 +540,12 @@ h2{
             padding-top: 7%;
         }
     }
+
+/* aplico al navbar                                               */    
+    nav ul li a{
+        font-size: 12px;
+        padding: 5px 5px;
+    }
 }
 
 /* aplico mobile first desde 768px                                */
@@ -487,5 +555,9 @@ h2{
         h1{
             padding-top: 4%;
         }
+    }
+    .columna-3{
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -8,6 +8,7 @@
     <meta name="keywords" content="Servicio, Catering Fotografía, Publicidad, Eventos fotográficos">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="css/pruebacss.css">
+    <script src="https://kit.fontawesome.com/11b35565d8.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -17,25 +18,29 @@
 <body>
     <!--aca iria logo y la navegacion-->
     <header>
-        <h1 class="animate__animated animate__fadeInDown">Roco Catering</h1>
         <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="Pages/error.html" class="enlace">
+                <img src="./Media/logo.png" alt="" class="logo">
+            </a>
             <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li><a href="Pages/rococateringservicios.html" >Servicios</a></li>
-                <li><a href="Pages/rococateringgaleria.html" >Galeria</a></li>
-                <li><a href="Pages/rococateringconocenos.html" >Conocenos</a></li>
-                <li><a href="Pages/rococateringcovid.html" >Medidas Covid</a>
-                <li><a href="#contact" >Contactanos</a></li>
-            </ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Pages/rococateringservicios.html">Servicios</a></li>
+                <li><a href="Pages/rococateringgaleria.html">Galeria</a></li>
+                <li><a href="Pages/rococateringconocenos.html">Conocenos</a></li>
+                <li><a href="Pages/rococateringcovid.html">Medidas Covid</a></li>
+                <li><a href="index.html#contact">Contactanos</a></li>
+            </ul>  
         </nav>
     </header>
     <!--Buscar un buen color para la letra/o cambiar fondo-->
-    <main class="inicio">
-
-        <p class="inicio__fondoImagen">Vos prepara el set nosotros nos encargamos de La Comida</p>
-
+    <main>
+        <div class="inicio">
+            <div class="inicio__fondoImagen" ><p>Vos prepara el set nosotros nos encargamos de La Comida</p> </div>
+        </div>
         
     </main>
     <footer>
